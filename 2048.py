@@ -1,6 +1,6 @@
 import random
 
-# Étape 1 : Initialisation de la grille
+
 def creer_grille(taille):
     """Crée une grille vide avec des cases à zéro."""
     grille = []
@@ -63,7 +63,7 @@ def deplacer_ligne(ligne):
 
     return resultat
 
-# Étape 4 : Appliquer un mouvement
+
 def appliquer_mouvement(grille, direction):
     """Applique le mouvement choisi à la grille."""
     taille = len(grille)
@@ -93,7 +93,7 @@ def appliquer_mouvement(grille, direction):
 
     return nouvelle_grille
 
-# Étape 5 : Logique principale
+
 if __name__ == "__main__":
     taille = 4
     grille = creer_grille(taille)
@@ -111,7 +111,7 @@ if __name__ == "__main__":
         else:
             print("Impossible de bouger dans cette direction.")
 
-        # Vérifie si le joueur a perdu (plus de mouvements possibles)
+        
         mouvement_possible = any(
             appliquer_mouvement(grille, d) != grille for d in ["haut", "bas", "gauche", "droite"]
         )
