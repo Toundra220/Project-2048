@@ -2,7 +2,6 @@ import random
 
 
 def creer_grille(taille):
-    """Crée une grille vide avec des cases à zéro."""
     grille = []
     for _ in range(taille):
         ligne = [0] * taille
@@ -10,7 +9,6 @@ def creer_grille(taille):
     return grille
 
 def ajouter_tuile(grille):
-    """Ajoute une tuile (2 ou 4) dans une case vide."""
     cases_vides = []
     for i in range(len(grille)):
         for j in range(len(grille[i])):
@@ -22,7 +20,6 @@ def ajouter_tuile(grille):
         grille[i][j] = 2 if random.random() < 0.9 else 4
 
 def afficher_grille(grille):
-    """Affiche la grille dans la console."""
     for ligne in grille:
         texte = ""
         for case in ligne:
@@ -35,7 +32,6 @@ def afficher_grille(grille):
 
 # Étape 2 : Interaction avec le joueur
 def demander_direction():
-    """Demande au joueur une direction valide."""
     touches = {"z": "haut", "q": "gauche", "s": "bas", "d": "droite"}
     while True:
         touche = input("Déplacez avec Z (haut), Q (gauche), S (bas), D (droite) : ").strip().lower()
@@ -45,7 +41,6 @@ def demander_direction():
 
 # Étape 3 : Déplacer une ligne
 def deplacer_ligne(ligne):
-    """Déplace et combine les nombres d'une ligne vers la gauche."""
     taille = len(ligne)
     resultat = [0] * taille
     position = 0
@@ -65,7 +60,6 @@ def deplacer_ligne(ligne):
 
 
 def appliquer_mouvement(grille, direction):
-    """Applique le mouvement choisi à la grille."""
     taille = len(grille)
     nouvelle_grille = creer_grille(taille)
 
