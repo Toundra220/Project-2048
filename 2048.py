@@ -30,7 +30,6 @@ def afficher_grille(grille):
         print(texte)
         print("-" * (len(grille) * 5 - 1))
 
-# Étape 2 : Interaction avec le joueur
 def demander_direction():
     touches = {"z": "haut", "q": "gauche", "s": "bas", "d": "droite"}
     while True:
@@ -39,7 +38,7 @@ def demander_direction():
             return touches[touche]
         print("Touche invalide. Utilisez Z, Q, S ou D.")
 
-# Étape 3 : Déplacer une ligne
+
 def deplacer_ligne(ligne):
     taille = len(ligne)
     resultat = [0] * taille
