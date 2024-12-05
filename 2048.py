@@ -89,7 +89,7 @@ def appliquer_mouvement(grille, direction):
 
 
 if __name__ == "__main__":
-    taille = 4
+    taille = int(input("Choisissez la taille de la grille:"))
     grille = creer_grille(taille)
     ajouter_tuile(grille)
     ajouter_tuile(grille)
